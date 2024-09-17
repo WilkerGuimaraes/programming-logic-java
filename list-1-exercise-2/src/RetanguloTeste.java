@@ -1,6 +1,6 @@
 public class RetanguloTeste {
     public static void main(String[] args) {
-        Retangulo retangulo = new Retangulo(5, 2);
+        Retangulo retangulo = new Retangulo();
 
         retangulo.setAltura(8);
         retangulo.setLargura(13);

@@ -1,9 +1,9 @@
 public class PessoaTeste {
     public static void main(String[] args) {
-        Pessoa pessoa = new Pessoa("Wilker", 25);
+        Pessoa pessoa = new Pessoa();
 
-        pessoa.setNome("Ryan");
-        pessoa.setIdade(36);
+        pessoa.setNome("Wilker");
+        pessoa.setIdade(25);
 
         System.out.println(pessoa.toString());
     }
