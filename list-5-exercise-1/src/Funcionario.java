@@ -1,12 +1,22 @@
 public class Funcionario extends Pessoa {
-    private static int contador = 0;
     private int matricula;
     private double salario;
 
-    public Funcionario(String nome, String sobrenome, double salario) {
+    public Funcionario() {
+    }
+
+    public Funcionario(String nome, String sobrenome, int matricula, double salario) {
         super(nome, sobrenome);
-        this.matricula = ++contador;
+        this.matricula = matricula;
         this.salario = salario;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
     }
 
     public double getSalario() {
@@ -14,6 +24,9 @@ public class Funcionario extends Pessoa {
     }
 
     public void setSalario(double salario) {
+        if (salario < 0) {
+            throw new IllegalArgumentException("O salário não pode ser negativo.");
+        }
         this.salario = salario;
     }
 

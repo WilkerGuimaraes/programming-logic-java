@@ -1,11 +1,11 @@
 public class Professor extends Funcionario {
-    public Professor(String nome, String sobrenome, double salario) {
-        super(nome, sobrenome, salario);
+    public Professor(String nome, String sobrenome, int matricula, double salario) {
+        super(nome, sobrenome, matricula, salario);
     }
 
     @Override
     public double getSalarioPrimeiraParcela() {
-        return super.getSalario();
+        return getSalario();
     }
 
     @Override
